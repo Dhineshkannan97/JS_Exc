@@ -1,27 +1,13 @@
-/**
- * Given an array of numbers, returns true if _any_ element is positive
- * and false otherwise.
- *
- * @example
- * anyPositive([1, 2, 3, 4, 5]); // => true
- * anyPositive([1, 2, -3, 4, 5]); // => true
- * anyPositive([0, 0, 1]); // => true
- * anyPositive([-10, -10, -10]); // => false
- * anyPositive([-10, -10, 1]); // => true
- *
- * @param {number[]} array - An array of numbers
- * @returns {boolean} True if any number in the input array is positive
- *   and false otherwise.
- */
-function anyPositive(array) {
-  // This is your job. :)
+
+export function concat(leftArray, rightArray) {
+  let result = [];
+  for (let i = 0; i < leftArray.length; i++) {
+    result.push(leftArray[i]);
+  }
+  for (let i = 0; i < rightArray.length; i++) {
+    result.push(rightArray[i]);
+  }
+  return result;
 }
 
-if (require.main === module) {
-  console.log('Running sanity checks for anyPositive:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
-}
-
-module.exports = anyPositive;
+console.log(concat([1,2,3,4,5] ,[6,7,8,9,10]));
